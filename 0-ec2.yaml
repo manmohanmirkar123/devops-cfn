@@ -1,0 +1,12 @@
+Resources:
+   myEC2Instance:
+     Type: AWS::EC2::Instance
+     Properties:
+       ImageId: ami-a4c7edb2
+       InstanceType: t2.micro
+       AvailabilityZone: us-east-1a
+       Tags:
+         - Key: Name
+           Value: My-ec2
+         - Key: BU
+           Value: HR
