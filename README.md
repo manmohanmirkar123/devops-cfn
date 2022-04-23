@@ -10,3 +10,5 @@ aws cloudformation create-stack --stack-name myEC2stack --template-body file://0
 aws cloudformation update-stack --stack-name myEC2stack --template-body file://1-ec2.yaml --parameters ParameterKey=SecurityGroupDescription,ParameterValue=Greatsg
 
 aws cloudformation delete-stack --stack-name myEC2stack
+
+aws cloudformation create-stack --stack-name myEC2stack --template-body file://2-userdata-ec2.yaml --parameters ParameterKey=SecurityGroupDescription,ParameterValue=Greatsg
