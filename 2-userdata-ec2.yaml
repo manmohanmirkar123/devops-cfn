@@ -7,20 +7,21 @@ Resources:
    myEC2Instance:
      Type: AWS::EC2::Instance
      Properties:
-       ImageId: ami-a4c7edb2
+       ImageId: ami-0f9fc25dd2506cf6d
        InstanceType: t2.micro
        AvailabilityZone: us-east-1a
        SecurityGroups:
          - !Ref SSHSecurityGroup
          - !Ref ServerSecurityGroup
        UserData: 
-        Fn::Base64: |
+         Fn::Base64: |
           #!/bin/bash -xe
           yum update -y
           yum install -y httpd
           systemctl start httpd
           systemctl enable httpd
-          echo"Hello from UserData " > /var/www/html/index.html
+          echo "Hello World from user data" > /var/www/html/index.html
+          
        Tags:
          - Key: Name
            Value: My-ec2
