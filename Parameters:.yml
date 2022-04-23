@@ -49,9 +49,7 @@ Resources:
            ToPort: 22
            
 Outputs:
-    EC2ID:
-     Description: The Instance ID
-     Value: !Ref myEC2Instance
-     Export:
-      Name: EC2ID
+  InstanceID:
+    Description: The Instance ID
+    Value: !Ref myEC2Instance
 
