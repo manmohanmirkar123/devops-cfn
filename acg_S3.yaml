@@ -1,4 +1,4 @@
 Resources:
  Mys3bucket:
   Type: AWS::S3::Bucket
-
+  DeletionPolicy: Retain
